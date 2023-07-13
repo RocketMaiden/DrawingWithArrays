@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingWithArrays", "DrawingWithArrays.csproj", "{3ED67D8C-EBB5-45EB-B035-0678BFA6090E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3ED67D8C-EBB5-45EB-B035-0678BFA6090E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ED67D8C-EBB5-45EB-B035-0678BFA6090E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ED67D8C-EBB5-45EB-B035-0678BFA6090E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ED67D8C-EBB5-45EB-B035-0678BFA6090E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B01FD8DE-2D1E-4639-93CE-7F2F0AD6F589}
+	EndGlobalSection
+EndGlobal
