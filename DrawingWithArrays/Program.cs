@@ -10,6 +10,7 @@ Console.WriteLine();
 CreateLine2(arr);
 DrawArray(arr);
 
+//indexing to row as to column with 0 height
 void CreateLine(int[,] array)
 {
     int width = array.GetLength(0);
