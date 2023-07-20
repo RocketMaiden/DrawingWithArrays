@@ -2,6 +2,7 @@
 int[,] arr2 = new int[4, 4];
 int[,] arr3 = new int[4, 4];
 int[,] arr4 = new int[4, 4];
+int[,] arr5 = new int[4, 4];
 
 Console.WriteLine("The array is created");
 Console.WriteLine("Here is the upper line");
@@ -20,6 +21,8 @@ DrawArray(arr3);
 Console.WriteLine("Here is an upper right to bottom left diagonal");
 CreateDiagonalUpRightBtmLeft(arr4);
 DrawArray(arr4);
+Console.WriteLine("Here is an upperleft to bottom right triangle(s)");
+CreateUppLeftBtmRightTriangles(arr5);
 
 
 //indexing to row as to column with 0 height
@@ -38,7 +41,7 @@ void CreateLine(int[,] array)
 }
 
 //other way of imaginig the indexes - flipping the inner and outer cycle instead of flippin indexes
-void CreateLine2(int[,] array)
+/*void CreateLine2(int[,] array)
 {
     int width = array.GetLength(0);
     int height = array.GetLength(1);
@@ -50,7 +53,7 @@ void CreateLine2(int[,] array)
             array[0, i] = 1;
         }
     }
-}
+}*/
 
 void CreateDiagonalUpLeftBtmRight(int[,] array)
 {
@@ -86,7 +89,7 @@ void CreateDiagonalUpRightBtmLeft(int[,] array)
     }
 }
 
-void DrawArray(int[,] array)
+void CreateUppLeftBtmRightTriangles(int[,] array)
 {
     int width = array.GetLength(0);
     int height = array.GetLength(1);
@@ -95,8 +98,26 @@ void DrawArray(int[,] array)
     {
         for (int j = 0; j < height; j++)
         {
-            Console.Write(array[j, i]);
+            if (j < i)
+            {
+                array[i, j] = 1;
+            }
         }
-        Console.WriteLine();
+    }
+}
+
+    void DrawArray(int[,] array)
+    {
+        int width = array.GetLength(0);
+        int height = array.GetLength(1);
+
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                Console.Write(array[j, i]);
+            }
+            Console.WriteLine();
+        }
     }
 }
