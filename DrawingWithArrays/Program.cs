@@ -23,6 +23,7 @@ CreateDiagonalUpRightBtmLeft(arr4);
 DrawArray(arr4);
 Console.WriteLine("Here is an upperleft to bottom right triangle(s)");
 CreateUppLeftBtmRightTriangles(arr5);
+DrawArray(arr5);
 
 
 //indexing to row as to column with 0 height
@@ -120,4 +121,3 @@ void CreateUppLeftBtmRightTriangles(int[,] array)
             Console.WriteLine();
         }
     }
-}
