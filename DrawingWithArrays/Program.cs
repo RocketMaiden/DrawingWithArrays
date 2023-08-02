@@ -21,6 +21,7 @@ DrawArray(arr3);
 Console.WriteLine("Here is an upper right to bottom left diagonal");
 CreateDiagonalUpRightBtmLeft(arr4);
 DrawArray(arr4);
+
 Console.WriteLine("Here is an upperleft to bottom right triangle(s)");
 CreateUppLeftBtmRightTriangles(arr5);
 DrawArray(arr5);
@@ -56,7 +57,7 @@ void CreateLine(int[,] array)
     }
 }*/
 
-void CreateDiagonalUpLeftBtmRight(int[,] array)
+/*void CreateDiagonalUpLeftBtmRight(int[,] array)
 {
     int width = array.GetLength(0);
     int height = array.GetLength(1);
@@ -71,9 +72,19 @@ void CreateDiagonalUpLeftBtmRight(int[,] array)
             }
         }
     }
+}*/
+
+void CreateDiagonalUpLeftBtmRight(int[,] array)
+{
+    int width = array.GetLength(0);
+
+    for (int i = 0; i < width; i++)
+    {
+        array[i, i] = 1;
+    }
 }
 
-void CreateDiagonalUpRightBtmLeft(int[,] array)
+/*void CreateDiagonalUpRightBtmLeft(int[,] array)
 {
     int width = array.GetLength(0);
     int height = array.GetLength(1);
@@ -88,6 +99,16 @@ void CreateDiagonalUpRightBtmLeft(int[,] array)
             }
         }
     }
+}*/
+
+void CreateDiagonalUpRightBtmLeft(int[,] array)
+{
+    int width = array.GetLength(0);
+
+    for(int i = 0; i < width; i++)
+    {
+        array[i, width - i - 1] = 1;
+    }
 }
 
 void CreateUppLeftBtmRightTriangles(int[,] array)
@@ -99,7 +120,7 @@ void CreateUppLeftBtmRightTriangles(int[,] array)
     {
         for (int j = 0; j < height; j++)
         {
-            if (j < i)
+            if (j >= i)
             {
                 array[i, j] = 1;
             }
